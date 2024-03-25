@@ -1,0 +1,10 @@
+.toolbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0px 170px;
+}
+button{
+    margin-right: 5px;
+}

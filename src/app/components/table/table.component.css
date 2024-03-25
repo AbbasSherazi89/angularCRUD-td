@@ -1,0 +1,11 @@
+.maintable{
+    width: 80%;
+    margin: 20px auto;
+}
+
+.add-btn{
+    color: green;
+}
+.edit-btn{
+    color: orange;
+}
