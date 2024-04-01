@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TreeNodeComponent } from './tree-node.component';
+import { EditNodeComponent } from './edit-node.component';
 
-describe('TreeNodeComponent', () => {
-  let component: TreeNodeComponent;
-  let fixture: ComponentFixture<TreeNodeComponent>;
+describe('EditNodeComponent', () => {
+  let component: EditNodeComponent;
+  let fixture: ComponentFixture<EditNodeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TreeNodeComponent]
+      declarations: [EditNodeComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(TreeNodeComponent);
+    fixture = TestBed.createComponent(EditNodeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

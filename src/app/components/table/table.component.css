@@ -1,11 +1,18 @@
-.maintable{
-    width: 80%;
-    margin: 20px auto;
+.maintable {
+  width: 80%;
+  margin: 20px auto;
 }
 
-.add-btn{
-    color: green;
+.add-btn {
+  color: green;
 }
-.edit-btn{
-    color: orange;
+.edit-btn {
+  color: orange;
+}
+
+@media only screen and (max-width: 650px) {
+  .maintable {
+    width: auto;
+    margin:auto;
+  }
 }

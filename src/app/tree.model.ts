@@ -2,9 +2,10 @@ export interface TreeNode {
     id: number;
     name: string;
     children?: TreeNode[];
+    parent?:TreeNode;
   }
 
-const treeNodes: TreeNode[] = [
+export const tree: TreeNode[] = [
     {
       id: 1,
       name: 'Fruits',
@@ -35,15 +36,22 @@ const treeNodes: TreeNode[] = [
       children: [
         {
           id: 7,
-          name: 'Carrots'
+          name: 'Carrots',
         },
         {
           id: 8,
-          name: 'Broccoli'
+          name: 'Broccoli',
+          children: [
+            {
+              id: 9,
+              name: 'Green Brocoli'
+            },
+            {
+              id: 10,
+              name: 'Yellow Brocoli'
+            }
+          ]
         }
       ]
     }
   ];
-
-  // Example of using treeNodes
-console.log(treeNodes);

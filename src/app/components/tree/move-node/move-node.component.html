@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>Move Node</h1>
+<div mat-dialog-content>
+    <p>Selected Node: {{ selectedNode.name }}</p>
+    <mat-form-field>
+        <mat-label>Choose Replacement Node</mat-label>
+        <mat-select [(ngModel)]="selectedNode">
+          <mat-option *ngFor="let node of availableNodes" [value]="node">
+            {{ node.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onCancelClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="selectedNode" cdkFocusInitial>Save</button>
+  </div>

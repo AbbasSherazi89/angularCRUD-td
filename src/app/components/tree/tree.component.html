@@ -1,12 +1,31 @@
-<mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+<div class="treeComp">
+  <button mat-raised-button (click)="addParentNode()">Add parent node</button
+  >
+  <br />
+  <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
     <!-- This is the tree node template for leaf nodes -->
     <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
       <!-- use a disabled button to provide padding for tree leaf -->
       <button mat-icon-button disabled></button>
       {{ node.name }}
+      <button mat-icon-button (click)="addChildNode(node.id)">
+        <mat-icon>add</mat-icon>
+      </button>
+      <button mat-icon-button (click)="editNode(node)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button (click)="onNodeClick(node)">
+        <mat-icon>swap_vert</mat-icon>
+      </button>
+      <button mat-icon-button (click)="deleteNode(node.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
     </mat-tree-node>
     <!-- This is the tree node template for expandable nodes -->
-    <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding>
+    <mat-tree-node
+      *matTreeNodeDef="let node; when: hasChild"
+      matTreeNodePadding
+    >
       <button
         mat-icon-button
         matTreeNodeToggle
@@ -17,6 +36,18 @@
         </mat-icon>
       </button>
       {{ node.name }}
+      <button mat-icon-button (click)="addChildNode(node.id)">
+        <mat-icon>add</mat-icon>
+      </button>
+      <button mat-icon-button (click)="editNode(node)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button (click)="onNodeClick(node)">
+        <mat-icon>swap_vert</mat-icon>
+      </button>
+      <button mat-icon-button (click)="deleteNode(node.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
     </mat-tree-node>
   </mat-tree>
-  
+</div>

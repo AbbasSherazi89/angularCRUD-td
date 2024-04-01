@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTreeModule } from '@angular/material/tree';
+import { MatSelectModule } from '@angular/material/select';
+
 const material = [
   MatTableModule,
   MatButtonModule,
@@ -20,6 +22,7 @@ const material = [
   MatInputModule,
   MatToolbarModule,
   MatTreeModule,
+  MatSelectModule
 ];
 
 @NgModule({
