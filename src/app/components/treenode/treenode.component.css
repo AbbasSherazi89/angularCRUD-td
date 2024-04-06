@@ -1,0 +1,10 @@
+.treeComp{
+    /* margin: 20px 150px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-weight: 500;
+}

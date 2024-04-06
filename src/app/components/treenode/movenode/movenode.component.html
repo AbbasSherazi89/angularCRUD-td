@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Move Node</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Choose Replacement Node</mat-label>
+        <mat-select [(ngModel)]="selectedNode" (selectionChange)="onSelectNode($event.value)">
+          <mat-option *ngFor="let node of availableNodes" [value]="node">
+            {{ node.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="cancel()">Cancel</button>
+    <button mat-button (click)="save()">Save</button>
+  </div>

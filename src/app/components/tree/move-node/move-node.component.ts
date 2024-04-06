@@ -26,6 +26,6 @@ export class MoveNodeComponent {
   onSaveClick(): void {
     // Return the selected replacement node
     this.dialogRef.close(this.selectedNode);
-    console.log(this.selectedNode);
+    // console.log(this.selectedNode);
   }
 }

@@ -13,10 +13,28 @@ import { AddNodeComponent } from './components/tree/add-node/add-node.component'
 import { EditNodeComponent } from './components/tree/edit-node/edit-node.component';
 import { AddChildNodeComponent } from './components/tree/add-child-node/add-child-node.component';
 import { MoveNodeComponent } from './components/tree/move-node/move-node.component';
+import { TreenodeComponent } from './components/treenode/treenode.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CreatenodeComponent } from './components/treenode/createnode/createnode.component';
+import { MovenodeComponent } from './components/treenode/movenode/movenode.component';
 
 @NgModule({
-  declarations: [AppComponent, TableComponent, TreeComponent, HeaderComponent, UpdateComponent, AddComponent, AddNodeComponent, EditNodeComponent, AddChildNodeComponent, MoveNodeComponent],
-  imports: [BrowserModule, AppRoutingModule, MaterialModule],
+  declarations: [
+    AppComponent,
+    TableComponent,
+    TreeComponent,
+    HeaderComponent,
+    UpdateComponent,
+    AddComponent,
+    AddNodeComponent,
+    EditNodeComponent,
+    AddChildNodeComponent,
+    MoveNodeComponent,
+    TreenodeComponent,
+    CreatenodeComponent,
+    MovenodeComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, MaterialModule, HttpClientModule],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
 })
