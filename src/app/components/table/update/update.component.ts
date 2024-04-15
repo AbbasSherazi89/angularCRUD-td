@@ -14,12 +14,10 @@ export class UpdateComponent {
     public dialogRef: MatDialogRef<UpdateComponent>,
     @Inject(MAT_DIALOG_DATA) public data: { item: Item }
   ) {
-    // Initialize the updatedItem with a copy of the original item
     this.updatedItem = { ...data.item };
   }
 
   updateItemAndClose(): void {
-    // Send the updated item back to the parent component when the dialog is closed
     this.dialogRef.close({ item: this.updatedItem });
   }
 

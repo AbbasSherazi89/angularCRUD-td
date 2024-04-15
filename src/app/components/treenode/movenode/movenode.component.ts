@@ -24,7 +24,6 @@ export class MovenodeComponent {
   }
 
   save(): void {
-    console.log(this.selectedNode);
     this.dialogRef.close(this.selectedNode);
   }
 

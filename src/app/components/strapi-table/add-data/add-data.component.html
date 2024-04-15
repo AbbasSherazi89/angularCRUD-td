@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>Create New Item</h2>
+<div mat-dialog-content class="addDialogData">
+  <!-- Your form fields for creating a new item -->
+  <!-- <mat-form-field>
+    <input matInput disabled="" placeholder="ID" [(ngModel)]="newItem.id" required />
+  </mat-form-field> -->
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="First Name"
+      [(ngModel)]="newItem.fname"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Second Name"
+      [(ngModel)]="newItem.lname"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Email" [(ngModel)]="newItem.email" required />
+  </mat-form-field>
+  <!-- Add more form fields as needed -->
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="closeDialog()">Cancel</button>
+  <button mat-button color="primary" (click)="createItem()">Create</button>
+</div>

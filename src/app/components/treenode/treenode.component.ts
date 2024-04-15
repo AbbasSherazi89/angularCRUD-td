@@ -80,7 +80,7 @@ export class TreenodeComponent {
   fetchTreeNodes(): void {
     this.treeNodeService.getTreeNodes().subscribe((response: any) => {
       if (response && response.length > 0) {
-        console.log('Response from the backend in if statement: ', response);
+        // console.log('Response from the backend in if statement: ', response);
         const transformedNodes = response.map((nodeData: any) => {
           return {
             expandable: !!nodeData.children && nodeData.children.length > 0,
@@ -92,7 +92,7 @@ export class TreenodeComponent {
         });
 
         this.dataSource.data = transformedNodes;
-        console.log('data after being fetched:', transformedNodes);
+        // console.log('data after being fetched:', transformedNodes);
         this.cdr.detectChanges();
       } else {
         console.error('Invalid response or data not found.');
@@ -143,7 +143,7 @@ export class TreenodeComponent {
 
   openMoveNodeDialog(node: any): void {
     this.clickedNode = node;
-    this.treeNodeService.getAvailableNodes(node).subscribe((availableNodes) => {
+    this.treeNodeService.getAvailableNodes(node.id).subscribe((availableNodes) => {
       const dialogRef = this.dialog.open(MovenodeComponent, {
         width: '300px',
         data: { availableNodes },

@@ -17,6 +17,9 @@ import { TreenodeComponent } from './components/treenode/treenode.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CreatenodeComponent } from './components/treenode/createnode/createnode.component';
 import { MovenodeComponent } from './components/treenode/movenode/movenode.component';
+import { StrapiTableComponent } from './components/strapi-table/strapi-table.component';
+import { AddDataComponent } from './components/strapi-table/add-data/add-data.component';
+import { UpdateDataComponent } from './components/strapi-table/update-data/update-data.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { MovenodeComponent } from './components/treenode/movenode/movenode.compo
     TreenodeComponent,
     CreatenodeComponent,
     MovenodeComponent,
+    StrapiTableComponent,
+    AddDataComponent,
+    UpdateDataComponent
   ],
   imports: [BrowserModule, AppRoutingModule, MaterialModule, HttpClientModule],
   providers: [provideAnimationsAsync()],
